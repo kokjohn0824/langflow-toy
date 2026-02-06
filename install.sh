@@ -4,7 +4,7 @@
 # 或指定目錄：curl -sL .../install.sh | bash -s -- ./my-langflow
 set -e
 
-REPO_URL="${LANGFLOW_TOY_REPO_URL:-https://github.com/REPLACE_ME/langflow-toy.git}"
+REPO_URL="${LANGFLOW_TOY_REPO_URL:-https://github.com/kokjohn0824/langflow-toy.git}"
 INSTALL_DIR="${1:-./langflow-toy}"
 
 if ! command -v git >/dev/null 2>&1; then

@@ -6,16 +6,14 @@
 
 ## 一鍵安裝
 
-（請將下方 URL 的 `<OWNER>` 換成實際 GitHub 帳號或組織；若為 fork，改為你的帳號。）
-
 ```bash
-curl -sL https://raw.githubusercontent.com/<OWNER>/langflow-toy/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/kokjohn0824/langflow-toy/main/install.sh | bash
 ```
 
 指定安裝目錄（例如當前目錄下的 `my-langflow`）：
 
 ```bash
-curl -sL https://raw.githubusercontent.com/<OWNER>/langflow-toy/main/install.sh | bash -s -- ./my-langflow
+curl -sL https://raw.githubusercontent.com/kokjohn0824/langflow-toy/main/install.sh | bash -s -- ./my-langflow
 ```
 
 安裝腳本會 clone 本 repo 並執行 `./scripts/setup.sh`，依提示選擇 Docker 或 uv 即可。
@@ -81,6 +79,4 @@ gh repo create langflow-toy --public --source=. --remote=origin --description "�
 # 若已有 remote，可改為：gh repo create langflow-toy --public --source=. --push
 ```
 
-建立後請：
-- 將本 README 與一鍵安裝指令中的 `<OWNER>` 換成實際 GitHub 帳號或組織。
-- 將 `install.sh` 內 `REPO_URL` 的 `REPLACE_ME` 改為你的 GitHub 帳號（一鍵安裝的 clone 才會指向正確 repo），再 push。
+若 fork 到其他帳號，請將 README 與 `install.sh` 內的 `kokjohn0824` 改為你的 GitHub 帳號後再 push。
