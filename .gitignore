@@ -1,0 +1,24 @@
+# Environment and secrets
+.env
+.env.local
+*.env
+
+# Python / uv
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+uv.lock
+
+# Optional: uncomment if you don't want to track Python version
+# .python-version
+
+# IDE / OS
+.DS_Store
+.idea/
+*.swp
+*.swo
+
+# Langflow / Docker (optional)
+docker_example/.env
