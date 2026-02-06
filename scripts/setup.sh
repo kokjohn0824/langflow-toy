@@ -19,7 +19,7 @@ echo "請選擇安裝方式："
 echo "  [1] Docker 版本（使用 docker run，不需安裝 Python/uv）"
 echo "  [2] 本機 uv 版本（使用 uv + Python，可自訂依賴）"
 echo ""
-read -r -p "是否使用 Docker 版本安裝？(y/N) " use_docker
+read -r -p "是否使用 Docker 版本安裝？(y/N) " use_docker < /dev/tty
 case "$use_docker" in
   [yY]|[yY][eE][sS]|1)
     USE_DOCKER=1
@@ -48,7 +48,7 @@ if [ "$USE_DOCKER" = "1" ]; then
   echo "  [3] 將 Flow 打包成映像（自訂 flow JSON）"
   echo "  [4] 自訂 Langflow 映像（自訂程式碼／依賴）"
   echo ""
-  read -r -p "請輸入 1～4（預設 1）: " docker_choice
+  read -r -p "請輸入 1～4（預設 1）: " docker_choice < /dev/tty
   docker_choice="${docker_choice:-1}"
 
   case "$docker_choice" in
@@ -361,7 +361,7 @@ ensure_uv() {
 
   # 詢問是否改為使用官方安裝腳本直接安裝
   echo ""
-  read -r -p "是否要改為使用官方安裝腳本直接安裝 uv？(y/N) " answer
+  read -r -p "是否要改為使用官方安裝腳本直接安裝 uv？(y/N) " answer < /dev/tty
   case "$answer" in
     [yY]|[yY][eE][sS])
       echo "正在以官方安裝腳本安裝 uv..."
